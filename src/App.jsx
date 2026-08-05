@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { VideoBackground } from './components/motion/VideoBackground';
+import { AuroraBackground } from './components/motion/AuroraBackground';
 import { AmbientCursor } from './components/motion/AmbientCursor';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
@@ -18,8 +18,8 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-transparent text-[#1C1C1A] dark:text-[#F4F4F0] font-sans selection:bg-[#D90429] selection:text-[#F4F4F0] overflow-x-hidden relative z-0 transition-colors duration-700">
-      <VideoBackground />
+    <div className="min-h-screen bg-[#F4F4F0] dark:bg-[#0A0A0A] text-[#1C1C1A] dark:text-[#F4F4F0] font-sans selection:bg-[#D90429] selection:text-[#F4F4F0] overflow-x-hidden relative z-0 transition-colors duration-700">
+      <AuroraBackground />
       <AmbientCursor />
        <style dangerouslySetInnerHTML={{__html: `
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
