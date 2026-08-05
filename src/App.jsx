@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AuroraBackground } from './components/motion/AuroraBackground';
 import { AmbientCursor } from './components/motion/AmbientCursor';
 import { Navbar } from './components/Navbar';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
 import { Experience } from './pages/Experience';
@@ -29,6 +30,7 @@ function App() {
        `}} />
        
        <Navbar />
+       <ScrollToTop />
        
        <main className="relative z-10 w-full">
          <Routes>

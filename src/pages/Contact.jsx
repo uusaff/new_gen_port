@@ -64,7 +64,7 @@ export const Contact = () => {
               {[
                 { label: 'IN', url: 'https://linkedin.com/in/uusaff' },
                 { label: 'GH', url: 'https://github.com/uusaff' },
-                { label: 'X', url: 'https://twitter.com/uusaff' }
+                { label: 'IG', url: 'https://instagram.com/uusaff' }
               ].map((social, idx) => (
                  <MagneticButton key={idx} as="a" href={social.url} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-[#D90429] flex items-center justify-center text-xs font-bold text-[#D90429] hover:bg-[#D90429] hover:text-[#F4F4F0] transition-colors">
                    {social.label}
