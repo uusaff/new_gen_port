@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+@layer utilities {
+  .font-giant {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+}
