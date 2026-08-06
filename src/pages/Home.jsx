@@ -53,7 +53,7 @@ export const Home = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-[5%] md:top-[-2%] left-1/2 -translate-x-1/2 w-[100%] sm:w-[75%] md:w-[60%] max-w-2xl z-0 pointer-events-none flex justify-center items-center"
+        className="absolute top-[-5%] sm:top-[-10%] md:top-[-2%] left-1/2 -translate-x-1/2 w-[100%] sm:w-[75%] md:w-[60%] max-w-2xl z-0 pointer-events-none flex justify-center items-center"
       >
         <img 
           src="/profile.png" 
@@ -64,7 +64,7 @@ export const Home = () => {
       </motion.div>
 
       {/* Foreground Content */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end h-full flex-grow mt-[40vh] md:mt-[25vh]">
+      <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end h-full flex-grow mt-[20vh] md:mt-[25vh]">
         
         {/* Left Side: Staggered Text & CTAs */}
         <motion.div 
@@ -115,9 +115,9 @@ export const Home = () => {
           initial="hidden"
           animate="visible"
           variants={slideInRight}
-          className="w-full md:w-1/3 flex flex-col items-start md:items-end text-left md:text-right mt-12 md:mt-0 z-20"
+          className="w-full md:w-1/3 flex flex-row md:flex-col justify-between items-end text-left md:text-right mt-12 md:mt-0 z-20"
         >
-          <div className="w-24 h-24 rounded-full border border-[#D90429]/50 flex items-center justify-center mb-12 animate-[spin_12s_linear_infinite] bg-[#F4F4F0]/50 dark:bg-[#0A0A0A]/50 backdrop-blur-sm transition-colors duration-700">
+          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border border-[#D90429]/50 flex items-center justify-center mb-0 md:mb-12 animate-[spin_12s_linear_infinite] bg-[#F4F4F0]/50 dark:bg-[#0A0A0A]/50 backdrop-blur-sm transition-colors duration-700 flex-shrink-0">
             <svg viewBox="0 0 100 100" className="w-full h-full">
                <path id="circlePath" d="M 50, 50 m -32, 0 a 32,32 0 1,1 64,0 a 32,32 0 1,1 -64,0" fill="transparent"/>
                <text className="text-[10px] tracking-[0.2em] uppercase font-bold" fill="#D90429">
@@ -125,13 +125,16 @@ export const Home = () => {
                </text>
             </svg>
           </div>
-          <div className="border border-black/10 dark:border-white/10 p-5 w-56 rounded-xl bg-[#F4F4F0]/80 dark:bg-[#0A0A0A]/80 backdrop-blur-md shadow-xl transition-colors duration-700 flex flex-col justify-center">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-500 mb-1">Based In</p>
-            <p className="text-sm font-semibold text-[#1C1C1A] dark:text-[#F4F4F0]">Lahore, Pakistan</p>
-          </div>
-          <div className="border border-black/10 dark:border-white/10 p-5 w-56 mt-4 rounded-xl bg-[#F4F4F0]/80 dark:bg-[#0A0A0A]/80 backdrop-blur-md shadow-xl transition-colors duration-700 flex flex-col justify-center">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-gray-500 mb-1">Available For</p>
-            <p className="text-sm font-semibold text-[#D90429]">Freelance</p>
+          
+          <div className="flex flex-col gap-4">
+            <div className="border border-black/10 dark:border-white/10 p-4 md:p-5 w-40 md:w-56 rounded-xl bg-[#F4F4F0]/80 dark:bg-[#0A0A0A]/80 backdrop-blur-md shadow-xl transition-colors duration-700 flex flex-col justify-center text-left md:text-right">
+              <p className="text-[10px] font-bold tracking-widest uppercase text-gray-500 mb-1">Based In</p>
+              <p className="text-sm font-semibold text-[#1C1C1A] dark:text-[#F4F4F0]">Lahore, Pakistan</p>
+            </div>
+            <div className="border border-black/10 dark:border-white/10 p-4 md:p-5 w-40 md:w-56 rounded-xl bg-[#F4F4F0]/80 dark:bg-[#0A0A0A]/80 backdrop-blur-md shadow-xl transition-colors duration-700 flex flex-col justify-center text-left md:text-right">
+              <p className="text-[10px] font-bold tracking-widest uppercase text-gray-500 mb-1">Available For</p>
+              <p className="text-sm font-semibold text-[#D90429]">Freelance</p>
+            </div>
           </div>
         </motion.div>
       </div>

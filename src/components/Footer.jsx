@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 export const Footer = () => {
   return (
     <footer className="border-t border-black/10 dark:border-white/10 py-16 px-8 max-w-7xl mx-auto relative z-10 bg-[#F4F4F0]/80 dark:bg-[#0A0A0A]/80 backdrop-blur-md mt-24 transition-colors duration-700">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-12 md:gap-12">
         {/* Bio Column */}
-        <div className="md:col-span-2">
+        <div className="col-span-2">
           <Link to="/" className="text-2xl font-bold hover:text-[#D90429] transition-colors uppercase tracking-widest block mb-4">
             Yousaf
           </Link>
