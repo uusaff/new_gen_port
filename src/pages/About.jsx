@@ -31,7 +31,7 @@ export const About = () => {
                 The Engineer Behind the Code.
               </h1>
               <p className="text-lg md:text-xl text-gray-700 dark:text-gray-400 leading-relaxed transition-colors duration-700">
-                I don't just build interfaces. I engineer systems. I'm a Full-Stack Web Developer and Computer Science undergraduate at UMT, Lahore. My focus? Shipping scalable web applications and intuitive software. With a 3.48 CGPA and a deep background in C++ data structures, I write code that performs under pressure.
+                I don't just build interfaces. I engineer systems. I'm a Full-Stack Web Developer and Computer Science undergraduate at UMT, Lahore. My focus? Shipping scalable web applications and intuitive software. I write clean, scalable code that performs under pressure and drives business value.
               </p>
             </div>
           </div>
@@ -51,12 +51,12 @@ export const About = () => {
               </p>
             </div>
 
-            <div className="md:col-span-5 bg-[#D90429] text-[#F4F4F0] rounded-3xl p-8 md:p-12 hover:-translate-y-2 transition-transform duration-500 shadow-xl flex flex-col justify-between">
+            <div className="md:col-span-5 bg-[#E8E8E3]/50 dark:bg-[#1A1A1A]/50 border border-black/5 dark:border-white/5 rounded-3xl p-8 md:p-12 hover:-translate-y-2 hover:bg-[#E8E8E3] dark:hover:bg-[#1A1A1A] transition-all duration-500 shadow-lg flex flex-col justify-between">
               <div>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-8 h-8 mb-6 opacity-80"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                <h3 className="font-serif text-2xl md:text-3xl mb-4 leading-tight">AI-Powered <br/> SaaS Integration</h3>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-8 h-8 mb-6 opacity-80 text-[#1C1C1A] dark:text-[#F4F4F0]"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <h3 className="font-serif text-2xl md:text-3xl mb-4 leading-tight text-[#1C1C1A] dark:text-[#F4F4F0]">AI-Powered <br/> SaaS Integration</h3>
               </div>
-              <p className="text-[#F4F4F0]/80 leading-relaxed text-sm font-medium">
+              <p className="text-gray-700 dark:text-gray-400 leading-relaxed text-sm md:text-base">
                 The web is getting smarter. I build generative AI directly into SaaS products using tools like the Anthropic SDK. This isn't just basic API calls. It's intelligent automation.
               </p>
             </div>
@@ -118,6 +118,15 @@ export const About = () => {
            <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
              I scale robust backends on Firebase and MongoDB. I animate fluid frontends using Framer Motion and Tailwind CSS. My work ranges from AI-powered tools like Nutrition Cal to complex, interactive platforms like the Neural Exam Tracker.
            </p>
+        </section>
+      </ScrollReveal>
+
+      {/* 5. Education block (Merged) */}
+      <ScrollReveal>
+        <section className="text-center py-12 mb-12 border-t border-black/10 dark:border-white/10 pt-16">
+           <h2 className="text-xs font-bold tracking-widest uppercase mb-4 text-[#D90429]">Academic Background</h2>
+           <h3 className="font-serif text-2xl md:text-3xl leading-tight mb-2 text-[#1C1C1A] dark:text-[#F4F4F0]">Bachelor of Science in Computer Science</h3>
+           <p className="text-gray-700 dark:text-gray-400">University of Management & Technology, Lahore (2021 - 2025)</p>
         </section>
       </ScrollReveal>
       

@@ -95,7 +95,7 @@ export const Experience = () => {
                   {[
                     "Mastered object-oriented programming (OOP) and complex data structures using C++.",
                     "Collaborated on academic capstone projects, applying formal software development lifecycles (SDLC) to dynamic applications.",
-                    "Maintained a 3.48 CGPA while simultaneously managing rigorous freelance engineering workloads."
+                    "Managed rigorous freelance engineering workloads alongside intensive academic requirements, delivering production-ready applications on schedule."
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-4 text-gray-600 dark:text-gray-400 text-sm leading-relaxed border-l-2 border-gray-400 pl-4">
                       {item}
@@ -107,7 +107,7 @@ export const Experience = () => {
           </motion.div>
         </motion.div>
       </div>
-      <NextPageButton to="/education" label="Academic Roots" />
+      <NextPageButton to="/contact" label="Let's Talk" />
     </section>
   );
 };

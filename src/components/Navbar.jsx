@@ -10,8 +10,6 @@ export const Navbar = () => {
     { name: 'ABOUT', path: '/about' },
     { name: 'PROJECTS', path: '/projects' },
     { name: 'EXPERIENCE', path: '/experience' },
-    { name: 'EDUCATION', path: '/education' },
-    { name: 'SERVICES', path: '/services' },
     { name: 'CONTACT', path: '/contact' },
   ];
 

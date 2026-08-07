@@ -95,7 +95,7 @@ export const Contact = () => {
               <textarea name="message" required rows="4" className="border-b border-black/20 dark:border-white/20 bg-transparent py-3 focus:outline-none focus:border-[#D90429] dark:focus:border-[#D90429] dark:text-[#F4F4F0] transition-colors resize-none" placeholder="Hello, I'd like to talk about..."></textarea>
             </div>
 
-            <MagneticButton type="submit" disabled={status === 'sending'} className="self-start inline-flex items-center gap-2 mt-4 border border-[#1C1C1A] dark:border-white/20 px-8 py-4 text-xs font-bold tracking-widest uppercase hover:border-[#D90429] dark:hover:border-[#D90429] hover:bg-[#D90429] hover:text-[#F4F4F0] transition-colors disabled:opacity-50">
+            <MagneticButton type="submit" disabled={status === 'sending'} className="self-start inline-flex items-center gap-2 mt-4 bg-[#D90429] text-[#F4F4F0] px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-[#1C1C1A] dark:hover:bg-[#F4F4F0] dark:hover:text-[#1C1C1A] transition-colors duration-300 disabled:opacity-50">
               {status === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
             </MagneticButton>
           </form>
