@@ -1,48 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { ScrollReveal } from '../components/motion/ScrollReveal';
 import { MagneticButton } from '../components/motion/MagneticButton';
 
 export const Contact = () => {
   const form = useRef();
-  const [status, setStatus] = useState(null);
-
-  const sendEmail = async (e) => {
-    e.preventDefault();
-    setStatus('sending');
-
-    // Extract values directly from the form elements
-    const formData = new FormData(e.target);
-    const payload = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message')
-    };
-
-    try {
-      // Send JSON payload to FormSubmit
-      const response = await fetch("https://formsubmit.co/ajax/uussaff@gmail.com", {
-        method: "POST",
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setStatus('success');
-        e.target.reset();
-      } else {
-        setStatus('error');
-        console.error("Backend Error:", data.error);
-      }
-    } catch (error) {
-      setStatus('error');
-      console.error("Network Error:", error);
-    }
-  };
 
   return (
     <ScrollReveal>
@@ -76,11 +37,15 @@ export const Contact = () => {
         </div>
 
         <div className="lg:w-2/3">
-          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8 max-w-2xl bg-[#F4F4F0]/80 dark:bg-[#0A0A0A]/80 p-8 border border-black/10 dark:border-white/10 shadow-xl backdrop-blur-sm relative transition-colors duration-700">
-            {status === 'success' && <div className="absolute -top-12 left-0 text-sm font-bold text-green-600 uppercase tracking-widest">Message dispatched successfully.</div>}
-            {status === 'error' && <div className="absolute -top-12 left-0 text-sm font-bold text-[#D90429] uppercase tracking-widest">Transmission failed. Please try again.</div>}
+          {/* Note: This is now a standard HTML form submission. It will redirect to FormSubmit, send the email, and redirect back. */}
+          <form ref={form} action="https://formsubmit.co/uussaff@gmail.com" method="POST" className="flex flex-col gap-8 max-w-2xl bg-[#F4F4F0]/80 dark:bg-[#0A0A0A]/80 p-8 border border-black/10 dark:border-white/10 shadow-xl backdrop-blur-sm relative transition-colors duration-700">
             
-            {/* Native HTML name attributes map directly to the email content */}
+            {/* FormSubmit Configuration */}
+            {/* Redirects back to your contact page after submission */}
+            <input type="hidden" name="_next" value="https://new-gen-port.vercel.app/contact" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New submission from your portfolio!" />
+
             <div className="flex flex-col gap-2">
               <label className="text-xs font-bold tracking-widest uppercase">Name</label>
               <input type="text" name="name" required className="border-b border-black/20 dark:border-white/20 bg-transparent py-3 focus:outline-none focus:border-[#D90429] dark:focus:border-[#D90429] dark:text-[#F4F4F0] transition-colors" placeholder="John Doe" />
@@ -96,8 +61,8 @@ export const Contact = () => {
               <textarea name="message" required rows="4" className="border-b border-black/20 dark:border-white/20 bg-transparent py-3 focus:outline-none focus:border-[#D90429] dark:focus:border-[#D90429] dark:text-[#F4F4F0] transition-colors resize-none" placeholder="Hello, I'd like to talk about..."></textarea>
             </div>
 
-            <MagneticButton type="submit" disabled={status === 'sending'} className="self-start inline-flex items-center gap-2 mt-4 bg-[#D90429] text-[#F4F4F0] px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-[#1C1C1A] dark:hover:bg-[#F4F4F0] dark:hover:text-[#1C1C1A] transition-colors duration-300 disabled:opacity-50">
-              {status === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
+            <MagneticButton type="submit" className="self-start inline-flex items-center gap-2 mt-4 bg-[#D90429] text-[#F4F4F0] px-8 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-[#1C1C1A] dark:hover:bg-[#F4F4F0] dark:hover:text-[#1C1C1A] transition-colors duration-300 disabled:opacity-50">
+              SEND MESSAGE
             </MagneticButton>
           </form>
         </div>
