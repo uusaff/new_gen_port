@@ -31,7 +31,7 @@ export const Home = () => {
         description="Need high-performance web applications with zero layout shift? I engineer fast, scalable full-stack software. Let's talk about your next project." 
       />
       {/* Background Marquee */}
-      <div className="absolute top-[40%] md:top-1/2 left-0 w-full z-10 pointer-events-none select-none overflow-hidden -translate-y-1/2">
+      <div className="absolute top-[40%] md:top-1/2 left-0 w-full z-0 pointer-events-none select-none overflow-hidden -translate-y-1/2">
         <motion.div
           className="flex whitespace-nowrap will-change-transform w-max"
           animate={{ x: ["0%", "-50%"] }}
@@ -53,7 +53,7 @@ export const Home = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-[-5%] sm:top-[-10%] md:top-[-2%] left-1/2 -translate-x-1/2 w-[100%] sm:w-[75%] md:w-[60%] max-w-2xl z-0 pointer-events-none flex justify-center items-center"
+        className="absolute top-[-5%] sm:top-[-10%] md:top-[-2%] left-1/2 -translate-x-1/2 w-[100%] sm:w-[75%] md:w-[60%] max-w-2xl z-10 pointer-events-none flex justify-center items-center"
       >
         <img 
           src="/profile.png" 

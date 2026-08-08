@@ -19,11 +19,12 @@ export const Contact = () => {
     };
 
     try {
-      // Send JSON payload to our custom Node.js backend
-      const response = await fetch("http://localhost:5001/api/contact", {
+      // Send JSON payload to FormSubmit
+      const response = await fetch("https://formsubmit.co/ajax/uussaff@gmail.com", {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(payload)
       });
