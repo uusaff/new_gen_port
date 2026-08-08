@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 export const Footer = () => {
   return (
@@ -28,19 +28,19 @@ export const Footer = () => {
       {/* Social Icons */}
       <div className="flex gap-6 mb-8 text-gray-500">
         <a href="https://github.com/uusaff" target="_blank" rel="noreferrer" className="hover:text-[#D90429] transition-colors">
-          <Github className="w-5 h-5" />
+          <FaGithub className="w-5 h-5" />
           <span className="sr-only">GitHub</span>
         </a>
         <a href="https://linkedin.com/in/uusaff" target="_blank" rel="noreferrer" className="hover:text-[#D90429] transition-colors">
-          <Linkedin className="w-5 h-5" />
+          <FaLinkedin className="w-5 h-5" />
           <span className="sr-only">LinkedIn</span>
         </a>
         <a href="https://instagram.com/uusaff" target="_blank" rel="noreferrer" className="hover:text-[#D90429] transition-colors">
-          <Instagram className="w-5 h-5" />
+          <FaInstagram className="w-5 h-5" />
           <span className="sr-only">Instagram</span>
         </a>
         <a href="mailto:uussaff@gmail.com" target="_blank" rel="noreferrer" className="hover:text-[#D90429] transition-colors">
-          <Mail className="w-5 h-5" />
+          <FaEnvelope className="w-5 h-5" />
           <span className="sr-only">Email</span>
         </a>
       </div>
